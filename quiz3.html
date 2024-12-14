@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <style> #submit-btn,#reset-btn{background-color: rgb(16, 90, 154);}  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Quiz</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"  href="style1.css">
+</head>
+<body style="background-color: rgb(16, 90, 154);">
+          
+    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img src="https://th.bing.com/th?id=ODLS.f2936527-e4f8-4231-9052-5f09b6fc4a59&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="jQuery Logo" height="30" class="d-inline-block align-text-top">
+                    jQuery
+                  </a>
+
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+             
+              <a class="nav-link active" href="#">Instructions</a>
+                  
+
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    More Quizes
+                  </button>
+                  <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="quiz1.html">HTML Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz2.html">CSS Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz4.html">Bootstrap Quiz</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          
+        </div>
+        
+        
+
+    </nav>
+   
+    <div id="progressBar"></div>
+
+    
+  <div class="container-fluid">
+      
+    <div class="container mt-5">
+    <form id="quiz-wrapper">
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q1. What is jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q1" value="a" required>A JavaScript library</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="b">A CSS framework</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="c">A programming language</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="d">A database</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q2. Which sign does jQuery use as a shortcut for jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q2" value="a" required>$</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="b">?</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="c">%</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="d">#</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q3. Which jQuery method is used to hide selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q3" value="a" required>hide()</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="b">visible(false)</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="c">display(none)</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="d">hidden()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q4. Which jQuery method is used to set one or more style properties for selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q4" value="a" required>css()</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="b">html()</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="c">style()</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="d">setStyle()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q5. Which jQuery method is used to perform an asynchronous HTTP request?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q5" value="a" required>ajax()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="b">get()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="c">post()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="d">http()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q6. Which jQuery method is used to remove selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q6" value="a" required>remove()</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="b">delete()</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="c">detach()</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="d">erase()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q7. Which jQuery method is used to attach a function to be executed when the DOM is fully loaded?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q7" value="a" required>ready()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="b">load()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="c">onload()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="d">domready()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q8. Which jQuery method is used to stop an animation or effect before it is finished?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q8" value="a" required>stop()</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="b">finish()</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="c">clear()</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="d">end()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q9. Which jQuery method is used to toggle between adding and removing a class name from selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q9" value="a" required>toggleClass()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="b">switchClass()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="c">addClass()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="d">removeClass()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q10. Which jQuery method is used to get the text content of selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q10" value="a" required>text()</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="b">html()</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="c">val()</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="d">content()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+        <input id="submit-btn" type="submit" value="Submit" class="btn btn-primary me-2">
+        <input id="reset-btn" type="reset" value="Reset" class="btn btn-secondary">
+        </div>
+      </div>
+    </form>
+    </div>
+    
+  </div>
+
+
+
+</body>
+<script>
+    window.onscroll = function() { updateProgressBar() };
+
+function updateProgressBar() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+</script>
+</html>

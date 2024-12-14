@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $("#inst").click(function(){
+     $("#quiz-wrapper").hide();
+     $("#popup").show();
+    });
+    $("#close").click(function(){
+      $("#popup").hide();
+      $("#quiz-wrapper").show();
+    });
+  });

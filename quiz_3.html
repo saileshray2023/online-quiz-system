@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced jQuery Quiz</title>
+  <style> #submit-btn,#reset-btn{background-color: rgb(16, 90, 154);}  
+
+  </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"  href="style1.css">
+</head>
+<body style="background-color: rgb(16, 90, 154);">
+          
+    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img src="https://th.bing.com/th?id=ODLS.f2936527-e4f8-4231-9052-5f09b6fc4a59&w=32&h=32&qlt=90&pcl=fffffa&o=6&pid=1.2" alt="jQuery Logo" height="30" class="d-inline-block align-text-top">
+                    jQuery
+                  </a>
+
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+             
+              <a class="nav-link active" href="#" id="inst">Instructions</a>
+                  
+
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    More Quizes
+                  </button>
+                  <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="quiz_1.html">Advance HTML Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz_2.html">Advance CSS Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz_4.html">Advanced Bootstrap Quiz</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          
+        </div>
+        
+        
+
+    </nav>
+   
+    <div id="progressBar"></div>
+
+    <div class="container mt-5" id="popup" >
+      
+      <ul>
+        <li>Read each question carefully.</li>
+        <li>Select the correct answer from the given options.</li>
+        <li>Each question is mandatory and must be answered.</li>
+        <li>Click the "Submit" button to submit your answers.</li>
+        <li>Click the "Reset" button to clear all your answers and start over.</li>
+      </ul>
+      <button class="btn btn-primary" id="close">Close</button>
+    </div>
+   <div class="container-fluid">
+      
+    <div class="container mt-5">
+    <form id="quiz-wrapper">
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q1. Which method is used to perform an asynchronous HTTP request in jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q1" value="a" required>$.ajax()</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="b">$.get()</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="c">$.post()</label>
+        <label><input class="radio-btn" type="radio" name="q1" value="d">$.http()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q2. How can you attach a handler to an event for the elements that match the selector, now or in the future, using jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q2" value="a" required>.on()</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="b">.bind()</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="c">.live()</label>
+        <label><input class="radio-btn" type="radio" name="q2" value="d">.delegate()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q3. Which jQuery method is used to stop the currently-running animation?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q3" value="a" required>.stop()</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="b">.finish()</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="c">.clearQueue()</label>
+        <label><input class="radio-btn" type="radio" name="q3" value="d">.end()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q4. How do you check if an element is hidden in jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q4" value="a" required>$(element).is(':hidden')</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="b">$(element).is(':visible')</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="c">$(element).css('display') === 'none'</label>
+        <label><input class="radio-btn" type="radio" name="q4" value="d">$(element).hasClass('hidden')</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q5. Which jQuery method is used to get the current coordinates of the first element in the set of matched elements, relative to the document?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q5" value="a" required>.offset()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="b">.position()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="c">.location()</label>
+        <label><input class="radio-btn" type="radio" name="q5" value="d">.coordinates()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q6. How can you disable a button using jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q6" value="a" required>$('#button').prop('disabled', true)</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="b">$('#button').attr('disabled', 'disabled')</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="c">$('#button').disable()</label>
+        <label><input class="radio-btn" type="radio" name="q6" value="d">$('#button').addClass('disabled')</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q7. Which jQuery method is used to remove all child nodes and content from the selected elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q7" value="a" required>.empty()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="b">.remove()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="c">.detach()</label>
+        <label><input class="radio-btn" type="radio" name="q7" value="d">.clear()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q8. How do you select all elements with a class of "test" in jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q8" value="a" required>$('.test')</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="b">$('#test')</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="c">$('test')</label>
+        <label><input class="radio-btn" type="radio" name="q8" value="d">$('.test-class')</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q9. Which jQuery method is used to get the value of an attribute for the first element in the set of matched elements?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q9" value="a" required>.attr()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="b">.prop()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="c">.getAttr()</label>
+        <label><input class="radio-btn" type="radio" name="q9" value="d">.getProp()</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mb-3">
+        <p class="quiz-question col-12">Q10. How do you check if an element has a specific class using jQuery?</p>
+        <div class="col-12">
+        <label><input class="radio-btn" type="radio" name="q10" value="a" required>$(element).hasClass('className')</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="b">$(element).is('.className')</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="c">$(element).className === 'className'</label>
+        <label><input class="radio-btn" type="radio" name="q10" value="d">$(element).attr('class') === 'className'</label>
+        </div>
+        <hr class="col-12">
+      </div>
+
+      <div class="row mt-4">
+        <div class="col-12 text-center">
+        <input id="submit-btn" type="submit" value="Submit" class="btn btn-primary me-2">
+        <input id="reset-btn" type="reset" value="Reset" class="btn btn-secondary">
+        </div>
+      </div>
+    </form>
+    </div>
+    
+  </div>
+
+
+
+</body>
+<script>
+    window.onscroll = function() { updateProgressBar() };
+
+function updateProgressBar() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+</script>
+</html>

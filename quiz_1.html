@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style> #submit-btn,#reset-btn{background-color:orangered;}  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced HTML Quiz</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script><script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css"  href="style1.css">
+</head>
+<body style="background-color:orangered;">
+          
+    <nav class="navbar navbar-expand-lg  fixed-top bg-body-tertiary">
+        <div class="container-fluid">
+            
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="navbar-brand" href="#">
+                    <img src="https://th.bing.com/th/id/OIP.bI8KDjd8-nDvzTX_Uok7FwHaHa?w=5000&h=5000&rs=1&pid=ImgDetMain" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                    HTML
+                  </a>
+
+              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+             
+              <a class="nav-link active" href="#" id="inst">Instructions</a>
+              
+
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown">
+                  <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    More Quizes
+                  </button>
+                  <ul class="dropdown-menu ">
+                    <li><a class="dropdown-item" href="quiz_2.html">Advanced CSS Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz_3.html">Advanced jQuery Quiz</a></li>
+                    <li><a class="dropdown-item" href="quiz_4.html">Advanced Bootstrap Quiz</a></li>
+                  </ul>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+          
+        </div>
+        
+        
+
+    </nav>
+   
+    <div id="progressBar"></div>
+    <div class="container mt-5" id="popup" >
+      
+      <ul>
+        <li>Read each question carefully.</li>
+        <li>Select the correct answer from the given options.</li>
+        <li>Each question is mandatory and must be answered.</li>
+        <li>Click the "Submit" button to submit your answers.</li>
+        <li>Click the "Reset" button to clear all your answers and start over.</li>
+      </ul>
+      <button class="btn btn-primary" id="close">Close</button>
+    </div>
+
+  <div class="container-fluid">
+      
+    <form id="quiz-wrapper">
+        <p class="quiz-question">Q1. What is the purpose of the &lt;meta&gt; tag in HTML?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q1" value="a" required>To provide metadata about the HTML document</label>
+            <label><input class="radio-btn" type="radio" name="q1" value="b">To link external resources</label>
+            <label><input class="radio-btn" type="radio" name="q1" value="c">To create a section in the document</label>
+            <label><input class="radio-btn" type="radio" name="q1" value="d">To define the title of the document</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q2. Which HTML attribute is used to define inline styles?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q2" value="a" required>style</label>
+            <label><input class="radio-btn" type="radio" name="q2" value="b">class</label>
+            <label><input class="radio-btn" type="radio" name="q2" value="c">id</label>
+            <label><input class="radio-btn" type="radio" name="q2" value="d">styles</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q3. What is the correct HTML element for playing video files?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q3" value="a" required>&lt;video&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q3" value="b">&lt;media&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q3" value="c">&lt;movie&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q3" value="d">&lt;file&gt;</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q4. Which HTML element is used to define navigation links?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q4" value="a" required>&lt;nav&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q4" value="b">&lt;navigation&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q4" value="c">&lt;menu&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q4" value="d">&lt;links&gt;</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q5. How do you embed a YouTube video in HTML?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q5" value="a" required>&lt;iframe src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/iframe&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q5" value="b">&lt;video src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/video&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q5" value="c">&lt;embed src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/embed&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q5" value="d">&lt;youtube src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/youtube&gt;</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q6. What is the purpose of the &lt;canvas&gt; element in HTML?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q6" value="a" required>To draw graphics on the fly via scripting (usually JavaScript)</label>
+            <label><input class="radio-btn" type="radio" name="q6" value="b">To create a container for multimedia content</label>
+            <label><input class="radio-btn" type="radio" name="q6" value="c">To display a static image</label>
+            <label><input class="radio-btn" type="radio" name="q6" value="d">To define a section in the document</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q7. Which HTML attribute specifies an alternate text for an image, if the image cannot be displayed?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q7" value="a" required>alt</label>
+            <label><input class="radio-btn" type="radio" name="q7" value="b">title</label>
+            <label><input class="radio-btn" type="radio" name="q7" value="c">src</label>
+            <label><input class="radio-btn" type="radio" name="q7" value="d">href</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q8. What is the correct HTML element for inserting a line break?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q8" value="a" required>&lt;br&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q8" value="b">&lt;break&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q8" value="c">&lt;lb&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q8" value="d">&lt;linebreak&gt;</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q9. Which HTML element is used to specify a footer for a document or section?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q9" value="a" required>&lt;footer&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q9" value="b">&lt;bottom&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q9" value="c">&lt;section&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q9" value="d">&lt;end&gt;</label> <hr>
+        </div>
+
+        <p class="quiz-question">Q10. What is the correct HTML for creating a hyperlink?</p>
+        <div class="option">
+            <label><input class="radio-btn" type="radio" name="q10" value="a" required>&lt;a href="http://www.example.com"&gt;Example&lt;/a&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q10" value="b">&lt;a url="http://www.example.com"&gt;Example&lt;/a&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q10" value="c">&lt;a name="http://www.example.com"&gt;Example&lt;/a&gt;</label>
+            <label><input class="radio-btn" type="radio" name="q10" value="d">&lt;a&gt;http://www.example.com&lt;/a&gt;</label> <hr>
+        </div>
+        <input id="submit-btn" type="submit" value="Submit">
+        <input id="reset-btn" type="reset" value="Reset">
+    </form>
+    
+  </div>
+</body>
+<script>
+    window.onscroll = function() { updateProgressBar() };
+
+function updateProgressBar() {
+  const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const scrolled = (winScroll / height) * 100;
+  document.getElementById("progressBar").style.width = scrolled + "%";
+}
+</script>
+</html>

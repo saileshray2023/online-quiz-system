@@ -34,4 +34,16 @@
             $("#popup").hide();
             $("#quiz-wrapper").show();
         });
+
+        $('#submit-btn').click(function(event) {
+            event.preventDefault();  // Prevent the default form submission
+    
+            // Show the success alert
+            $('#success-alert').fadeIn();
+    
+            // Redirect to home page after 2 seconds (2000 milliseconds)
+            setTimeout(function() {
+                window.location.href = 'index.html';  // Redirect to home page
+            }, 2000);
+        });
     });

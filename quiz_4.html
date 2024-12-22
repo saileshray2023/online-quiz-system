@@ -47,7 +47,9 @@
 
             </div>
           </div>
-          
+          <div id="quiz-timer" class="ms-auto text-danger fw-bold">
+            <span id="timer-text">Time Left: 05:00</span>
+          </div>
         </div>
         
         
@@ -55,7 +57,9 @@
     </nav>
    
     <div id="progressBar"></div>
-    
+    <div class="alert alert-dark" role="alert" id="success-alert" style="display: none;position:fixed;top:50px;left:40%;">
+      <b>Quiz-is-submitted!</b>
+    </div>
     <div class="container mt-5" id="popup" >
       
       <ul>
@@ -206,6 +210,27 @@ function updateProgressBar() {
   const scrolled = (winScroll / height) * 100;
   document.getElementById("progressBar").style.width = scrolled + "%";
 }
+const totalTime = 5 * 60; // Total time in seconds (e.g., 5 minutes)
+    let timeLeft = totalTime;
 
+    function startTimer() {
+        const timerText = document.getElementById("timer-text");
+        const interval = setInterval(() => {
+            const minutes = Math.floor(timeLeft / 60);
+            const seconds = timeLeft % 60;
+            timerText.textContent = `Time Left: ${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+
+            if (timeLeft <= 0) {
+                clearInterval(interval);
+                document.getElementById("quiz-wrapper").submit(); // Submit the form
+                window.location.href = "index.html"; // Redirect to home page
+            }
+
+            timeLeft--;
+        }, 1000);
+    }
+
+    // Start timer when the page loads
+    window.onload = startTimer;
 </script>
 </html>
